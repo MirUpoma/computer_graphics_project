@@ -90,8 +90,6 @@ def draw_military_base_background():
     glScalef(rail_length_x, rail_thickness, rail_thickness)
     glutSolidCube(1.0)
     glPopMatrix()
-    glEnable(GL_BLEND)
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     glColor4f(1.0, 1.0, 1.0, 0.4) 
     glBegin(GL_QUADS)
     glVertex3f(-ARENA_HALF_X - 10, -ARENA_HALF_Y - 10, camo_height)
@@ -117,7 +115,6 @@ def draw_military_base_background():
     glVertex3f(ARENA_HALF_X + 10, ARENA_HALF_Y + 2, camo_height - camo_down)
     glVertex3f(-ARENA_HALF_X - 10, ARENA_HALF_Y + 2, camo_height - camo_down)
     glEnd()
-    glDisable(GL_BLEND)
 
 def draw_arena():
     glColor3f(0.12, 0.13, 0.16)
@@ -1101,3 +1098,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
